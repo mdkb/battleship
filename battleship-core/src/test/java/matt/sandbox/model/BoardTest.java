@@ -41,10 +41,10 @@ public class BoardTest {
         assertEquals(1, board.getPlacedVessels().size());
         assertEquals(placement, board.getPlacedVessels().get(vessel));
 
-        assertEquals(Vessel.Type.BATTLESHIP, board.getSquare(0, 0).getContents());
-        assertEquals(Vessel.Type.BATTLESHIP, board.getSquare(1, 0).getContents());
-        assertEquals(Vessel.Type.BATTLESHIP, board.getSquare(2, 0).getContents());
-        assertEquals(Vessel.Type.BATTLESHIP, board.getSquare(3, 0).getContents());
+        assertEquals(vessel, board.getSquare(0, 0).getContents());
+        assertEquals(vessel, board.getSquare(1, 0).getContents());
+        assertEquals(vessel, board.getSquare(2, 0).getContents());
+        assertEquals(vessel, board.getSquare(3, 0).getContents());
         assertNull(board.getSquare(4, 0).getContents());
     }
 
@@ -58,10 +58,10 @@ public class BoardTest {
         assertEquals(1, board.getPlacedVessels().size());
         assertEquals(placement1, board.getPlacedVessels().get(vessel1));
 
-        assertEquals(Vessel.Type.BATTLESHIP, board.getSquare(0, 0).getContents());
-        assertEquals(Vessel.Type.BATTLESHIP, board.getSquare(1, 0).getContents());
-        assertEquals(Vessel.Type.BATTLESHIP, board.getSquare(2, 0).getContents());
-        assertEquals(Vessel.Type.BATTLESHIP, board.getSquare(3, 0).getContents());
+        assertEquals(vessel1, board.getSquare(0, 0).getContents());
+        assertEquals(vessel1, board.getSquare(1, 0).getContents());
+        assertEquals(vessel1, board.getSquare(2, 0).getContents());
+        assertEquals(vessel1, board.getSquare(3, 0).getContents());
         assertNull(board.getSquare(4, 0).getContents());
 
         Vessel vessel2 = new Vessel(Vessel.Type.CRUISER);
@@ -70,9 +70,9 @@ public class BoardTest {
         assertEquals(2, board.getPlacedVessels().size());
         assertEquals(placement2, board.getPlacedVessels().get(vessel2));
 
-        assertEquals(Vessel.Type.CRUISER, board.getSquare(4, 4).getContents());
-        assertEquals(Vessel.Type.CRUISER, board.getSquare(4, 5).getContents());
-        assertEquals(Vessel.Type.CRUISER, board.getSquare(4, 6).getContents());
+        assertEquals(vessel2, board.getSquare(4, 4).getContents());
+        assertEquals(vessel2, board.getSquare(4, 5).getContents());
+        assertEquals(vessel2, board.getSquare(4, 6).getContents());
         assertNull(board.getSquare(4, 7).getContents());
 
         Vessel vessel3 = new Vessel(Vessel.Type.DESTROYER);
@@ -81,8 +81,8 @@ public class BoardTest {
         assertEquals(3, board.getPlacedVessels().size());
         assertEquals(placement3, board.getPlacedVessels().get(vessel3));
 
-        assertEquals(Vessel.Type.DESTROYER, board.getSquare(7, 7).getContents());
-        assertEquals(Vessel.Type.DESTROYER, board.getSquare(7, 8).getContents());
+        assertEquals(vessel3, board.getSquare(7, 7).getContents());
+        assertEquals(vessel3, board.getSquare(7, 8).getContents());
         assertNull(board.getSquare(7, 9).getContents());
     }
 
